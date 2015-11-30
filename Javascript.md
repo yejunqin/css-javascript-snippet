@@ -73,3 +73,17 @@ var isArray = function(value){
 	return Object.prototype.toString.apply(value) === '[object Array]';
 }
 ```
+
+### 数组去重元素
+```
+function unique(arr) {
+        var result = [], hash = {};
+        for (var i = 0, elem; (elem = arr[i]) != null; i++) {
+            if (!hash[elem]) {
+                result.push(elem);
+                hash[elem] = true;
+            }
+        }
+        return result;
+    }
+```
